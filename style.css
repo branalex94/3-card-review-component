@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--general-text-font);
+}
+
+:root {
+  --sedan-background-color: hsl(31, 77%, 52%);
+  --suv-background-color: hsl(184, 100%, 22%);
+  --luxury-background-color: hsl(179, 100%, 13%);
+  /* Color for background, headings, buttons */
+  --button-background-color: hsl(0, 0%, 95%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --general-text-font: "Lexend Deca", sans-serif;
+  --header-text-font: "Big Shoulders Display", cursive;
+}
+
+body {
+  padding: 2rem;
+  background-color: var(--button-background-color);
+}
+
+.wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.review {
+  padding: 2.5rem;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review img {
+  width: 4rem;
+  height: 2.5rem;
+}
+
+.review__title {
+  color: var(--button-background-color);
+  font-family: var(--header-text-font);
+  font-size: 2rem;
+}
+
+.review__text {
+  text-align: left;
+  font-size: 15px;
+  color: var(--paragraph-color);
+}
+
+.sedan {
+  background-color: var(--sedan-background-color);
+}
+
+.suv {
+  background-color: var(--suv-background-color);
+}
+
+.luxury {
+  background-color: var(--luxury-background-color);
+}
+
+.review__button {
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.7rem;
+  width: 7rem;
+  background: var(--button-background-color);
+}
+
+.button--sedan {
+  color: var(--sedan-background-color);
+}
+.button--suv {
+  color: var(--suv-background-color);
+}
+.button--luxury {
+  color: var(--luxury-background-color);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    min-width: 40rem;
+    margin: 0 auto;
+    height: 30rem;
+  }
+
+  .review {
+    height: 100%;
+  }
+
+  .review__button:hover {
+    background: transparent;
+    color: #fff;
+    outline: 1px solid #fff;
+    cursor: pointer;
+  }
+}
